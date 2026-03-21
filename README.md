@@ -18,6 +18,25 @@ Este espaço tem como finalidade:
 - 🚀 Acompanhar o desenvolvimento dos projetos acadêmicos  
 - 📚 Centralizar conteúdos relevantes para o aprendizado  
 
+## 📂 Organização do Repositório
+
+A estrutura do repositório foi planejada para facilitar a navegação e o acompanhamento das aulas.
+
+- 📁 A pasta `aulas` contém os materiais organizados por aula, seguindo uma nomenclatura sequencial por extenso: `um`, `dois`, `tres`, etc.  
+- 🧩 Dentro de cada pasta de aula, encontram-se projetos, exemplos práticos e arquivos utilizados durante o encontro correspondente.  
+
+📌 **Exemplo de estrutura:**
+
+```
+aulas/
+└── dois/
+    └── meu_primeiro_django/
+```
+
+No exemplo acima, o diretório `aulas/dois/meu_primeiro_django` representa o projeto desenvolvido durante a **aula dois**, intitulado **"meu_primeiro_django"**.
+
+💡 Nesta seção do repositório, serão disponibilizados códigos-fonte, experimentos e outros arquivos relevantes para reforçar o aprendizado e apoiar as atividades práticas da disciplina.
+
 ## 🔗 Links Institucionais
 
 - 🌐 [Cursos Técnicos - Lauro de Freitas](https://tecnico.senaibahia.com.br/laurodefreitas/)  
