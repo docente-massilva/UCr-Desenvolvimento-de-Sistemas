@@ -1,21 +1,13 @@
-# Meu primeiro em Django
+# UCr - Desenvolvimento de Sistemas
 
-Este é o meu primeiro projeto em django realizado na aula de desenvolvimento de sistema ministado pelo professor Marcos.
+Este é o repositório da disciplina `UCr - Desenvolvimento de Sistemas` do curso **Técnico em Desenvolvimento de Sistemas** semi-presencial do Senai Lauro de Freitas.
 
-## Setup
+Ministada pelos professores:
 
-Para executar o projeto é necessário que se tenha instalado na máquina o Python e as dependências do projeto.
+* Marcos Antônio (_presencialmente_).
+* Dennis Jean Borges Rosado da Rocha (_online_)
 
-Para instalar as dependências execute:
+Links importantes:
 
-```
-python -m pip install -r requirements.txt
-```
-
-## Processo de desenvolvimento
-
-[...]
-
-## Funcionalidades implementadas
-
-[...]
+* [Cursos técnicos - Lauro de Freitas](https://tecnico.senaibahia.com.br/laurodefreitas/)
+* [Senai Bahia](https://senaibahia.com.br/)
