@@ -1,4 +1,22 @@
+import random
+
 from django.shortcuts import render
 
+
 def home(request):
-    return render(request, 'index.html')
+    context = {
+        "nome": random.choice(
+            [
+                "Ana",
+                "Carlos",
+                "João",
+                "Maria",
+                "Marcos",
+                "Sofia",
+                "Pedro",
+                "Luana",
+                "Rafael",
+            ]
+        )
+    }
+    return render(request, "index.html", context)
