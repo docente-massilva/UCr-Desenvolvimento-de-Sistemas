@@ -1,0 +1,16 @@
+FROM python:3.11-alpine
+
+# Pasta de trabalho dentro do container
+WORKDIR /app
+
+# Copia o arquivo de requisitos para o container
+COPY requirements.txt .
+
+# Executa o comando para instalar as dependências do projeto
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copia o código fonte do projeto para o container
+COPY ./src/ .
+
+# Comando para rodar a aplicação
+ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:8000"]

@@ -1,0 +1,14 @@
+services:
+  web:
+    container_name: meu_app_web
+    image: meu_app:2.0
+    ports:
+      - "3000:8000"
+    volumes:
+      - ./src:/app
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
