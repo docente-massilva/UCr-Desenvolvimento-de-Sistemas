@@ -5,5 +5,5 @@ from .models import Adotante
 @admin.register(Adotante)
 class AdotanteAdmin(admin.ModelAdmin):
     list_display = ("id", "nome", "email", "telefone")
-    search_fields = ("nome", "email")
+    search_fields = ("nome", "email", "telefone")
     ordering = ("nome",)

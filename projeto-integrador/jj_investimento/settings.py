@@ -78,11 +78,12 @@ WSGI_APPLICATION = 'jj_investimento.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        "NAME": "aula",
-        "USER": "root",
+        "ENGINE": "django.db.backends.mysql",
         "HOST": "127.0.0.1",
         "PORT": "3306",
+        "USER": "root",
+        "PASSWORD": None,
+        "NAME": "aula",
     }
 }
 
@@ -109,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'UTC'
 
