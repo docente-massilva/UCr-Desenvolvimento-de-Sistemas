@@ -1,0 +1,68 @@
+{% extends "page_app/global/index.html" %}
+
+{% block title %}
+Formulário de Adotante
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h1 class="mb-4">
+        Formulário de Adotante
+    </h1>
+
+    <div class="card">
+
+        <div class="card-body">
+            <div class="mb-3">
+                <div class="alert alert-danger">
+                    {{ form.errors }}
+                </div>
+            </div>
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label for="id_nome" class="form-label">
+                        Nome
+                    </label>
+                    {{ form.nome }}
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_email" class="form-label">
+                        Email
+                    </label>
+                    {{ form.email }}
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_telefone" class="form-label">
+                        Telefone
+                    </label>
+                    {{ form.telefone }}
+                </div>
+
+                <div class="d-flex gap-2">
+
+                    <button type="submit" class="btn btn-success">
+                        Salvar
+                    </button>
+
+                    <a href="{% url 'listar_adotantes' %}" class="btn btn-secondary">
+                        Cancelar
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends "page_app/global/index.html" %}
+
+{% block title %}
+Lista de Adotantes
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h1>
+            Lista de Adotantes
+        </h1>
+
+        <a href="{% url 'cadastrar_adotante' %}" class="btn btn-primary">
+            Novo Adotante
+        </a>
+
+    </div>
+
+    {% if lista_adotantes %}
+
+    <table class="table table-bordered table-hover">
+
+        <thead class="table-dark">
+
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th width="250">
+                    Ações
+                </th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for adotante in lista_adotantes %}
+
+            <tr>
+
+                <td>
+                    {{ adotante.id }}
+                </td>
+
+                <td>
+                    {{ adotante.nome }}
+                </td>
+
+                <td>
+                    {{ adotante.email }}
+                </td>
+
+                <td>
+                    {{ adotante.telefone }}
+                </td>
+
+                <td>
+
+                    <a href="{% url 'detalhar_adotante' adotante.id %}" class="btn btn-info btn-sm">
+                        Detalhar
+                    </a>
+
+                    <a href="{% url 'editar_adotante' adotante.id %}" class="btn btn-warning btn-sm">
+                        Editar
+                    </a>
+
+                    <a href="{% url 'excluir_adotante' adotante.id %}" class="btn btn-danger btn-sm">
+                        Excluir
+                    </a>
+
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    {% else %}
+
+    <div class="alert alert-warning">
+
+        Nenhum adotante cadastrado.
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

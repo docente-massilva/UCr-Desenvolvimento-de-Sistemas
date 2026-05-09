@@ -1,0 +1,61 @@
+{% extends "page_app/global/index.html" %}
+
+{% block title %}
+Detalhar Adotante
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h1 class="mb-4">
+        Detalhes do Adotante
+    </h1>
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <p>
+                <strong>ID:</strong>
+                {{ adotante.id }}
+            </p>
+
+            <p>
+                <strong>Nome:</strong>
+                {{ adotante.nome }}
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                {{ adotante.email }}
+            </p>
+
+            <p>
+                <strong>Telefone:</strong>
+                {{ adotante.telefone }}
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="mt-3 d-flex gap-2">
+
+        <a href="{% url 'editar_adotante' adotante.id %}" class="btn btn-warning">
+            Editar
+        </a>
+
+        <a href="{% url 'excluir_adotante' adotante.id %}" class="btn btn-danger">
+            Excluir
+        </a>
+
+        <a href="{% url 'listar_adotantes' %}" class="btn btn-secondary">
+            Voltar
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

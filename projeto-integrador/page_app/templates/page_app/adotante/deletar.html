@@ -1,0 +1,64 @@
+{% extends "page_app/global/index.html" %}
+
+{% block title %}
+Excluir Adotante
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h1 class="mb-4 text-danger">
+        Excluir Adotante
+    </h1>
+
+    <div class="card border-danger">
+
+        <div class="card-body">
+
+            <p class="fs-5">
+                Tem certeza que deseja excluir o adotante abaixo?
+            </p>
+
+            <hr>
+
+            <p>
+                <strong>Nome:</strong>
+                {{ adotante.nome }}
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                {{ adotante.email }}
+            </p>
+
+            <p>
+                <strong>Telefone:</strong>
+                {{ adotante.telefone }}
+            </p>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <div class="d-flex gap-2 mt-4">
+
+                    <button type="submit" class="btn btn-danger">
+                        Confirmar Exclusão
+                    </button>
+
+                    <a href="{% url 'listar_adotantes' %}" class="btn btn-secondary">
+                        Cancelar
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
